@@ -1,0 +1,229 @@
+<% include headerhome %>
+<h1>FUNCTION POINT CALCULATION</h1> 
+
+<form action="/functionpoint" method="POST">
+            <div class="container">
+             <div class="jumbotron">
+                 <h2>Step 1:</h2>
+                 <h4>Fill in the following table with the estimates that pertain to the software you are developing:-</h4>
+                 <table style="width:100%">
+                   <tc>
+                         <th>Functions</th>
+                         <th>Simple</th> 
+                         <th>Average</th>
+                         <th>Complex</th>
+                   </tc>
+                   <tr>
+                         <td>Number of User Inputs</td>
+                         <td><input type="number" name="simple_1" min="0"></td>
+                         <td><input type="number" name="average_1" min="0"></td>
+                         <td><input type="number" name="complex_1" min="0"></td>
+                    </tr>
+                    <tr>
+                          <td>Number of User outputs</td>
+                          <td><input type="number" name="simple_2" min="0"></td>
+                          <td><input type="number" name="average_2" min="0"></td>
+                          <td><input type="number" name="complex_2" min="0"></td>
+                     </tr>
+                      <tr>
+                           <td>Number of User Inquiries</td>
+                           <td><input type="number" name="simple_3" min="0"></td>
+                           <td><input type="number" name="average_3" min="0"></td>
+                           <td><input type="number" name="complex_3" min="0"></td>
+                     </tr>
+                     <tr>
+                           <td>Number of Files</td>
+                           <td><input type="number" name="simple_4" min="0"></td>
+                           <td><input type="number" name="average_4" min="0"></td>
+                           <td><input type="number" name="complex_4" min="0"></td>
+                     </tr>
+                     <tr>
+                           <td>Number of External Interfaces</td>
+                           <td><input type="number" name="simple_5" min="0"></td>
+                           <td><input type="number" name="average_5" min="0"></td>
+                           <td><input type="number" name="complex_5" min="0"></td>
+                     </tr>
+                </table>
+             </div>
+     </div>
+     <div class="container">
+             <div class="jumbotron">
+                 <h2>Step 2:</h2>
+                 <h4>Assign a value of importance to each question. The range is from 0 to 5. Zero being of low importance to five being of high importance.</h4>
+                 <table style="width:100%">
+                   <tc>
+                         <th></th>
+                         <th></th>
+                         <th>
+                             <span style="display:inline-block; width: 23px;">1</span>
+                             <span style="display:inline-block; width: 23px;">2</span>
+                             <span style="display:inline-block; width: 23px;">3</span>
+                             <span style="display:inline-block; width: 23px;">4</span>
+                             <span style="display:inline-block; width: 23px;">5</span>
+                         </th>
+                   </tc>
+                   <tr>
+                         <td>1</td>
+                         <td>Does the system require reliable backup and recovery?</td>
+                         <td>
+                                  <input type="radio" name="first" value="1">
+                                  <input type="radio" name="first" value="2">
+                                  <input type="radio" name="first" value="3">
+                                  <input type="radio" name="first" value="4">
+                                  <input type="radio" name="first" value="5">
+                         </td>
+                    </tr>
+                    <tr>
+                         <td>2</td>
+                         <td>Are data communications required?</td>
+                         <td>
+                                  <input type="radio" name="second" value="1">
+                                  <input type="radio" name="second" value="2">
+                                  <input type="radio" name="second" value="3">
+                                  <input type="radio" name="second" value="4">
+                                  <input type="radio" name="second" value="5">
+                         </td> 
+                     </tr>
+                      <tr>
+                            <td>3</td>
+                         <td>Are there distributed processing functions?</td>
+                         <td>
+                                  <input type="radio" name="third" value="1">
+                                  <input type="radio" name="third" value="2">
+                                  <input type="radio" name="third" value="3">
+                                  <input type="radio" name="third" value="4">
+                                  <input type="radio" name="third" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                         <td>4</td>
+                         <td>Is performance critical?</td>
+                         <td>
+                                  <input type="radio" name="fourth" value="1">
+                                  <input type="radio" name="fourth" value="2">
+                                  <input type="radio" name="fourth" value="3">
+                                  <input type="radio" name="fourth" value="4">
+                                  <input type="radio" name="fourth" value="5">
+                         </td>  
+                     </tr>
+                     <tr>
+                        <td>5</td>
+                         <td>Will the system run in an existing, heavily utilized operational environment?</td>
+                         <td>
+                                  <input type="radio" name="fifth" value="1">
+                                  <input type="radio" name="fifth" value="2">
+                                  <input type="radio" name="fifth" value="3">
+                                  <input type="radio" name="fifth" value="4">
+                                  <input type="radio" name="fifth" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>6</td>
+                         <td>Does the system require on-line data entry?</td>
+                         <td>
+                                  <input type="radio" name="sixth" value="1">
+                                  <input type="radio" name="sixth" value="2">
+                                  <input type="radio" name="sixth" value="3">
+                                  <input type="radio" name="sixth" value="4">
+                                  <input type="radio" name="sixth" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>7</td>
+                         <td>Does the on-line data entry require the input transaction to be built over multiple screens or operations?</td>
+                         <td>
+                                  <input type="radio" name="seventh" value="1">
+                                  <input type="radio" name="seventh" value="2">
+                                  <input type="radio" name="seventh" value="3">
+                                  <input type="radio" name="seventh" value="4">
+                                  <input type="radio" name="seventh" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>8</td>
+                         <td>Are the master files updated on-line?</td>
+                         <td>
+                                  <input type="radio" name="eight" value="1">
+                                  <input type="radio" name="eight" value="2">
+                                  <input type="radio" name="eight" value="3">
+                                  <input type="radio" name="eight" value="4">
+                                  <input type="radio" name="eight" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>9</td>
+                         <td>Are the inputs, outputs, files, or inquiries complex?</td>
+                         <td>
+                                  <input type="radio" name="ninth" value="1">
+                                  <input type="radio" name="ninth" value="2">
+                                  <input type="radio" name="ninth" value="3">
+                                  <input type="radio" name="ninth" value="4">
+                                  <input type="radio" name="ninth" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>10</td>
+                         <td>Is the internal processing complex?</td>
+                         <td>
+                                  <input type="radio" name="tenth" value="1">
+                                  <input type="radio" name="tenth" value="2">
+                                  <input type="radio" name="tenth" value="3">
+                                  <input type="radio" name="tenth" value="4">
+                                  <input type="radio" name="tenth" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>11</td>
+                         <td>Is the code designed to be reusable?</td>
+                         <td>
+                                  <input type="radio" name="eleventh" value="1">
+                                  <input type="radio" name="eleventh" value="2">
+                                  <input type="radio" name="eleventh" value="3">
+                                  <input type="radio" name="eleventh" value="4">
+                                  <input type="radio" name="eleventh" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>12</td>
+                         <td>Are conversion and installation included in the design?</td>
+                         <td>
+                                  <input type="radio" name="twelveth" value="1">
+                                  <input type="radio" name="twelveth" value="2">
+                                  <input type="radio" name="twelveth" value="3">
+                                  <input type="radio" name="twelveth" value="4">
+                                  <input type="radio" name="twelveth" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>13</td>
+                         <td>Is the system designed for multiple installations in different organizations?</td>
+                         <td>
+                                  <input type="radio" name="thirteenth" value="1">
+                                  <input type="radio" name="thirteenth" value="2">
+                                  <input type="radio" name="thirteenth" value="3">
+                                  <input type="radio" name="thirteenth" value="4">
+                                  <input type="radio" name="thirteenth" value="5">
+                         </td> 
+                     </tr>
+                     <tr>
+                        <td>14</td>
+                         <td>Is the application designed to facilitate change and ease of use by the user?</td>
+                         <td>
+                                  <input type="radio" name="fourteenth" value="1">
+                                  <input type="radio" name="fourteenth" value="2">
+                                  <input type="radio" name="fourteenth" value="3">
+                                  <input type="radio" name="fourteenth" value="4">
+                                  <input type="radio" name="fourteenth" value="5">
+                         </td> 
+                     </tr>
+                </table>
+             </div>
+     </div>
+    <button onclick="myFunction()" class="btn btn-primary center-block">Calculate Function Point</button>
+ </form>
+ <h1>calculated fp=<%= fpcalculated %></h1>
+<% function myFunction(){      %>
+           <h1>calculated fp2=<%= fpcalculated %></h1>
+<%          };                 %>
+
+<% include footer %>

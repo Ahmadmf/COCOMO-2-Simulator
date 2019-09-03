@@ -1,0 +1,37 @@
+<% include headerhome %>
+             <h1>SLOC CALCULATION</h1>
+             <form action="/sloc" method="POST">
+                 <div class="container">
+                 <div class="jumbotron">
+                     <div class="form-group">
+                         <div class="col-xs-2">
+                           <label for="usr">Function Point:</label>
+                           <input type="number" name="fp" class="form-control" id="usr" step=0.001 width="8" min="0">
+                         </div>
+                     </div>
+            <div class="row">
+             <div class="col-sm-4 control-label text-right">
+                     <div class="form-group">
+                          <label for="sel1">Language Factor:</label>
+                           <select class="form-control" id="sel1" name="lf">
+                                  <option>Ada</option>
+                                  <option>Assembly</option>
+                                  <option>Basic</option>
+                                  <option>C</option>
+                                  <option>C++</option>
+                                  <option>Java</option>
+                                  <option> HTML 3.0 </option>
+                                  <option> Pascal </option>
+                                  <option> PERL </option>
+                                  <option>Spreadsheet</option>
+                                  <option> Oracle</option> 
+                           </select>
+                  </div>
+                  </div>
+                </div>
+                </div>
+        </div>
+                 <button class="btn btn-primary center-block">Calculate SLOCS</button>
+             </form>
+       <h1>calculated sloc =<%= sloccalculated %></h1>
+<% include footer %>

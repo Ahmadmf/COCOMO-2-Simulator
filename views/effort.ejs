@@ -1,0 +1,469 @@
+<% include headerhome %>
+<h1>Calcultae Effort,Development Time and Cost</h1>
+<form action="/effort" method="POST">
+<h4>Software Size  </h4>
+                     <div class="form-group">
+                         <div class="col-xs-1">
+                           <label for="usr">SLOC:</label>
+                           <input type="number" name="sloc" class="form-control" id="usr" step=0.001 width="6" min="0">
+                         </div>
+                     </div>
+<div class="container">
+    <div class="jumbotron">
+        <h3>Software Scale Drivers</h3>
+        <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Precedentedness</label>
+        <div class="col-sm-3">
+            <select class="form-control input-sm" name="precedentedness">
+                <option value=4.05>Very Low</option>
+                <option value=3.24>Low</option>
+                <option value=2.43 selected>Nominal</option>
+                <option value=1.62>High</option>
+                <option value=0.81>Very High</option>
+                <option value=0.00>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Architecture / Risk Resolution</label>
+        <div class="col-sm-3">
+            <select class="form-control input-sm" name="risk_resolution">
+                <option value=4.22>Very Low</option>
+                <option value=3.38>Low</option>
+                <option value=2.53 selected>Nominal</option>
+                <option value=1.69>High</option>
+                <option value=0.84>Very High</option>
+                <option value=0.00>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+     </div>
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Process Maturity</label>
+        <div class="col-sm-3">
+            <select class="form-control input-sm" name="process_maturity">
+                <option value=4.54>Very Low</option>
+                <option value=3.64>Low</option>
+                <option value=2.73 selected>Nominal</option>
+                <option value=1.82>High</option>
+                <option value=0.91>Very High</option>
+                <option value=0.00>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Development Flexibility</label>
+        <div class="col-sm-3">
+            <select class="form-control input-sm" name="development_flexibility">
+                <option value=6.07>Very Low</option>
+                <option value=4.86>Low</option>
+                <option value=3.64 selected>Nominal</option>
+                <option value=2.43>High</option>
+                <option value=1.21>Very High</option>
+                <option value=0.00>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Team Cohesion</label>
+        <div class="col-sm-3">
+            <select class="form-control input-sm" name="team_cohesion">
+                <option value=4.94>Very Low</option>
+                <option value=3.95>Low</option>
+                <option value=2.97 selected>Nominal</option>
+                <option value=1.98>High</option>
+                <option value=0.99>Very High</option>
+                <option value=0.00>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+     </div>
+</div>
+</div>
+
+
+<!--  creating 17 cost drivers -->
+<div class="container">
+    <div class="jumbotron"></div>
+       <h2>Software Cost Drivers</h2>
+       <div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Product</h2>
+    <div class="grid">
+         <div class="row">
+         <div class="col-2">
+         <div class="form-group">
+         <label class="col-sm-5 control-label text-right">Required Software Reliability</label>
+         <div class="col-sm-6">
+            <select class="form-control input-sm" name="rely">
+                <option value=0.75>Very Low</option>
+                <option value=0.88>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.15>High</option>
+                <option value=1.39>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Data Base Size</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="data">
+                <option value=0.93>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.09>High</option>
+                <option value=1.19>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Product Complexity</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="cplx">
+                <option value=0.75>Very Low</option>
+                <option value=0.88>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.15>High</option>
+                <option value=1.30>Very High</option>
+                <option value=1.66>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Developed for Reusability</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="ruse">
+                <option value=0.91>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.14>High</option>
+                <option value=1.29>Very High</option>
+                <option value=1.49>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Documentation Match to Lifecycle Needs	</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="docu">
+                <option value=0.89>Very Low</option>
+                <option value=0.95>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.06>High</option>
+                <option value=1.13>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       
+       
+       </div>       
+       
+       
+  </div>
+  
+  <!-- column 2   personnel -->
+  <div class="column" style="background-color:#bbb;">
+    <h2>Personnel</h2>
+    <div class="grid">
+         <div class="row">
+         <div class="col-2">
+         <div class="form-group">
+         <label class="col-sm-5 control-label text-right">Analyst Capability</label>
+         <div class="col-sm-6">
+            <select class="form-control input-sm" name="asap">
+                <option value=1.50>Very Low</option>
+                <option value=1.22>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.83>High</option>
+                <option value=0.67>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Programmer Capability</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="pcap">
+                <option value=1.37>Very Low</option>
+                <option value=1.16>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.87>High</option>
+                <option value=0.74>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Personnel Continuity</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="pcon">
+                <option value=1.24>Very Low</option>
+                <option value=1.10>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.92>High</option>
+                <option value=0.84>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Application Experience</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="apex">
+                <option value=1.22>Very Low</option>
+                <option value=1.10>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.89>High</option>
+                <option value=0.81>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Platform Experience</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="plex">
+                <option value=1.25>Very Low</option>
+                <option value=1.12>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.88>High</option>
+                <option value=0.81>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Language and Toolset Experience	</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="ltex">
+                <option value=1.22>Very Low</option>
+                <option value=1.10>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.91>High</option>
+                <option value=0.84>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       </div>
+       
+  </div>
+  
+  <!--column 3   platform -->
+  
+  
+  <div class="column" style="background-color:#ccc;">
+    
+    <h2>Platform</h2>
+    <div class="grid">
+         <div class="row">
+         <div class="col-2">
+         <div class="form-group">
+         <label class="col-sm-5 control-label text-right">Time Constraint</label>
+         <div class="col-sm-6">
+            <select class="form-control input-sm" name="time">
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.11>High</option>
+                <option value=1.31>Very High</option>
+                <option value=1.67>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Storage Constraint</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="stor">
+                
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.06>High</option>
+                <option value=1.21>Very High</option>
+                <option value=1.57>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Platform Volatility</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="pvol">
+                <option value=0.87>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.15>High</option>
+                <option value=1.30>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+      
+       
+       </div>
+    
+    
+    
+  </div>
+  
+  
+  
+  <!--column 4 Project -->
+  
+  <div class="column" style="background-color:#ddd;">
+         <h2>Project</h2>
+    <div class="grid">
+         <div class="row">
+         <div class="col-2">
+         <div class="form-group">
+         <label class="col-sm-5 control-label text-right">Use of Software Tools</label>
+         <div class="col-sm-6">
+            <select class="form-control input-sm" name="tool">
+                <option value=1.24>Very Low</option>
+                <option value=1.12>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.86>High</option>
+                <option value=0.72>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Multisite Development</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="site">
+                <option value=1.25>Very Low</option>
+                <option value=1.10>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=0.92>High</option>
+                <option value=0.84>Very High</option>
+                <option value=0.78>Extra High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col-2">
+        <div class="form-group">
+        <label class="col-sm-5 control-label text-right">Required Development Schedule</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" name="sced">
+                <option value=1.29>Very Low</option>
+                <option value=1.10>Low</option>
+                <option value=1.00 selected>Nominal</option>
+                <option value=1.00>High</option>
+                <option value=1.00>Very High</option>
+            </select>
+        </div>
+       </div>
+       </div>
+       </div>
+       
+       
+       
+       </div>
+         
+  </div>
+</div>
+  
+ </div>
+</div>
+<div class="container">
+    <div class="jumbotron">
+        
+        <div class="form-group">
+        <label class="col-sm-2 control-label text-right">Cost per Person Month</label>
+        <div class="col-sm-3">
+            <input type="float" name="cost" class="form-control" id="usr" step=0.001 width="4" height="3" min="0">
+        </div>
+       </div>
+        
+    </div>
+  </div>
+      <button class="btn btn-primary center-block">Calculate effort ,time and cost</button>  
+ <!--   <input type="submit" value="Search">                   -->
+  
+</form>
+
+
+<h1>Effort in PersonMonth=<%=effort%></h1>
+<h1>Development Time in Months=<%= time %></h1>
+<h1>Total Cost in=$<%=Cost%></h1>
+
+
+
+<% include footer %>
